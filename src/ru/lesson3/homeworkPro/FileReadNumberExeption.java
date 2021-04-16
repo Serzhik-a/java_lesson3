@@ -1,6 +1,6 @@
 package ru.lesson3.homeworkPro;
 
-public class FileReadNumberExeption extends Exception {
+public class FileReadNumberExeption extends RuntimeException {
 
     private Integer indexOfdigit;
     private String message;

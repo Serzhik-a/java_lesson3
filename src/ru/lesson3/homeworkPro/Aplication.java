@@ -9,6 +9,10 @@ public class Aplication {
     public static void main(String[] args) {
 
         File file = new File("Testtext.txt");
+        if (!file.isFile()) {
+            System.out.println("Файл не найден");
+            return;
+        }
         Scanner scanner = null;
 
         try {
@@ -17,7 +21,7 @@ public class Aplication {
             System.out.println("Файл не найден");
         }
         StringBuilder output = new StringBuilder();
-        output.append(InputAsk.readFromFile(scanner));
+        output.append(ReadFromFile.readFromFile(scanner));
         if (output.toString().isBlank()) {
             System.out.println("Файл пустой");
         } else {
